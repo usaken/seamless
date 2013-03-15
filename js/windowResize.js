@@ -9,6 +9,7 @@ $(document).ready(function(){
 						});
 		if ( windowWidth + windowHeight < 800 ) {
 			$( 'img' ).css({ 'width' : '31px', 'height' : '31px' });
+			$( 'li.buttons' ).css({ 'clear' : 'both' });
 		} else {
 			$( 'img' ).css({ 'width' : '62px', 'height' : '62px' });
 		}
