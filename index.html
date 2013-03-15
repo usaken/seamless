@@ -53,6 +53,7 @@ div.balloon div.title	{
 				<option value="80">80%</option>
 				<option value="100">100%</option>
 			</select>
+			<span id="debug"></span>
 		</li>
 		<li>
 			<img id="zoom_up" src="img/plus.png" />
@@ -215,17 +216,10 @@ $(document).ready(function(){
 	});
 	$( '#gps_start' ).click(function(){
 		doGps( 'start' );
-		$( this ).attr({'disabled' : 'disabled'});
-		$( '#gps_stop' ).removeAttr( 'disabled' );
 	});
 	$( '#gps_stop' ).click(function(){
-		$( this ).attr({'disabled' : 'disabled'});
-		$( this ).attr({'disabled' : 'disabled'});
-		$( '#gps_start' ).removeAttr( 'disabled' );
+		doGps( 'stop' );
 	});
-	
-	$( '#gps_start' ).removeAttr( 'disabled' );
-	$( '#gps_stop' ).attr({'disabled' : 'disabled'});
 });
 //]]>
 </script>
@@ -248,6 +242,17 @@ $(document).ready(function(){
 	$( '#setting input, #setting select' ).change(function(){
 		toggle();
 	});
+});
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+//********************************************************************************
+//デバッグ
+//********************************************************************************
+$(document).ready(function(){
+	$( '#debug' ).text( $(window).width() );
 });
 //]]>
 </script>
