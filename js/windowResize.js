@@ -7,9 +7,9 @@ $(document).ready(function(){
 							'width' : '100%',
 							'height' : String(windowHeight - menuHeight) + 'px'
 						});
-		if ( windowWidth + windowHeight < 800 ) {
+		if ( windowWidth + windowHeight <= 1000 ) {
 			$( 'img' ).css({ 'width' : '31px', 'height' : '31px' });
-			$( 'li.buttons' ).css({ 'clear' : 'both' });
+			$( 'li.buttons' ).css({ 'clear' : 'both', 'padding-top' : '20px' });
 		} else {
 			$( 'img' ).css({ 'width' : '62px', 'height' : '62px' });
 		}
